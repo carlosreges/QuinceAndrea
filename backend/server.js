@@ -9,7 +9,10 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:5500', 'https://tu-sitio-web.com'],
+    methods: ['GET', 'POST']
+}));
 app.use(express.json());
 
 // Rutas

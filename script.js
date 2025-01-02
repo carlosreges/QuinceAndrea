@@ -29,10 +29,13 @@ const countdown = setInterval(function() {
 // Array para almacenar los mensajes
 let messages = [];
 
+// Reemplaza todas las instancias de http://localhost:5000 con tu URL de Render
+const API_URL = 'https://quinceandrea.onrender.com';
+
 // Función para cargar mensajes desde el servidor
 async function loadMessages() {
     try {
-        const response = await fetch('http://localhost:5000/api/messages');
+        const response = await fetch(`${API_URL}/api/messages`);
         messages = await response.json();
         displayMessages();
     } catch (error) {
@@ -74,7 +77,7 @@ async function addMessage() {
         };
         
         try {
-            const response = await fetch('http://localhost:5000/api/messages', {
+            const response = await fetch(`${API_URL}/api/messages`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
