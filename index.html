@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años de Andrea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="decorative-border top"></div>
+        <img src="/images/flower-crown.png" alt="Logo XV" class="logo">
+        <h1>XV Años de Andrea Isabel</h1>
+        <p>¡Celebra conmigo este día tan especial!</p>
+        <div class="decorative-border bottom"></div>
+    </header>
+
+    <div class="separator">
+        <div class="separator-icon">♥</div>
+    </div>
+
+    <div class="countdown" id="countdown">
+        <h2>Para mi Cumple faltan:</h2>
+        <div>
+            <span id="days">00</span>
+            <p>Días</p>
+        </div>
+        <div>
+            <span id="hours">00</span>
+            <p>Horas</p>
+        </div>
+        <div>
+            <span id="minutes">00</span>
+            <p>Minutos</p>
+        </div>
+        <div>
+            <span id="seconds">00</span>
+            <p>Segundos</p>
+        </div>
+    </div>
+
+    <div class="separator">
+        <div class="separator-icon">✿</div>
+    </div>
+
+    <div class="photo-gallery">
+        <!-- Aquí agregarás las imágenes de tu hija -->
+        <img src="/photos/photo1.jpg" alt="Foto 1">
+        <img src="/photos/photo2.jpg" alt="Foto 2">
+        <img src="/photos/photo3.jpg" alt="Foto 3">
+    </div>
+
+    <div class="messages">
+        <h2>Déjame tus felicitaciones</h2>
+        <div class="message-form">
+            <textarea id="messageText" rows="4" placeholder="Escribe tu mensaje" style="width: 100%"></textarea>
+            <br>
+            <input type="text" id="messageName" placeholder="Escribe tu nombre">
+            <button onclick="addMessage()">Enviar mensaje</button>
+        </div>
+        <div class="message-list" id="messageList">
+            <!-- Aquí aparecerán los mensajes -->
+        </div>
+    </div>
+    
+    <div class="separator">
+        <div class="separator-icon">📍</div>
+    </div>
+
+    <section class="location">
+        <h2>Lugar del Evento</h2>
+        <div class="location-details">
+            <div class="address-info">
+                <p><strong>Restaurante Abeja Negra</strong></p>
+                <p>Av. Concepción Arenal 369</p>
+                <p>Córdoba Capital</p>
+                <br>
+                <p>Fecha: 18 de enero de 2025</p>
+                <p>Horario: 6:00 PM</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.989367482091!2d-64.18294408857292!3d-31.433222196958376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3efdf517715%3A0x9d90fc49122d3993!2sAbeja%20Negra!5e1!3m2!1ses-419!2sar!4v1735832208395!5m2!1ses-419!2sar"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><a href="tel:+5493512541636">📞 Teléfono</a></p>
+                <p><a href="mailto:andrea.isabel@gmail.com">✉️ Email</a></p>
+            </div>
+            <div class="footer-section">
+            </div>
+            <div class="footer-section">
+                <h3>Créditos</h3>
+                <p>Diseño web creado por <a href="https://github.com/CarlosReges" target="_blank">©Carlos Reges</a></p>
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
