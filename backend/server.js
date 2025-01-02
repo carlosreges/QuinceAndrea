@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const connectDB = require('./config/db');
 
 const app = express();
@@ -10,12 +11,15 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5500', 'https://tu-sitio-web.com'],
+    origin: ['http://localhost:5500', 'https://quinceandrea.onrender.com'],
     methods: ['GET', 'POST']
 }));
 app.use(express.json());
 
-// Rutas
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Rutas API
 app.post('/api/messages', async (req, res) => {
     try {
         const Message = require('./models/Message');
@@ -35,6 +39,11 @@ app.get('/api/messages', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
+});
+
+// Ruta catch-all para el frontend
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
