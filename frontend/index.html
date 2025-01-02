@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
 </head>
 <body>
     <header>
@@ -47,10 +49,15 @@
     </div>
 
     <div class="photo-gallery">
-        <!-- Aquí agregarás las imágenes de tu hija -->
-        <img src="photos/photo1.jpg" alt="Foto 1">
-        <img src="/photos/photo2.jpg" alt="Foto 2">
-        <img src="/photos/photo3.jpg" alt="Foto 3">
+        <a href="/photos/photo1.jpg" data-lightbox="gallery" data-title="Andrea">
+            <img src="/photos/photo1.jpg" alt="Foto 1">
+        </a>
+        <a href="/photos/photo2.jpg" data-lightbox="gallery" data-title="Andrea">
+            <img src="/photos/photo2.jpg" alt="Foto 2">
+        </a>
+        <a href="/photos/photo3.jpg" data-lightbox="gallery" data-title="Andrea">
+            <img src="/photos/photo3.jpg" alt="Foto 3">
+        </a>
     </div>
 
     <div class="messages">
@@ -113,5 +120,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
